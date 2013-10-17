@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import "compass";
+@import "helper.GRID";
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  @include box-sizing(border-box);
+}
+
+body {
+  font: 1em/1.2em "Open Sans", sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color:#40a0be;
+  text-decoration: none;
+
+    &:hover {
+      color:#333;
+    }
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.wrapper {
+  width:100%;
+  max-width: 65em;
+  height: auto;
+  margin: 2.5em auto;
+
+  @extend %grid--father;
+}
+
+.sidebar {
+  width:35%;
+  height: auto;
+  padding:1.5em;
+
+  @extend %grid--son;
+
+
+  p {
+    padding: .5em 0;
+  }
+}
+
+.site--title {
+  font-size: 1.6em;
+    span {
+      color:#40a0be;
+    }
+}
+
+.content {
+  width: 65%;
+  height: auto;
+  background: #ddd;
+
+  @extend %grid--son;
+}
+
+.project--title {
+  background:#40a0be;
+  color:#fff;
+  padding:1em .5em;
+
+    a {
+      color:#fff;
+      text-decoration: none;
+
+      &:after {
+        content:'\f0c1';
+        font-family: 'FontAwesome', sans-serif;
+        position: absolute;
+        top:.4em;
+        right:-1.2em;
+      }
+
+      &:hover {
+        &:after {
+          color:#333;
+        }
+      }
+    }
+}
+
+.project {
+  pre {
+    background:#333;
+    color:white;
+    padding:.5em;
+  }
+
+  p {
+    padding:.5em 1.5em;
+  }
+}
+
+$break: 60em;
+
+@media all and (max-width:$break) {
+    %grid--father {
+      letter-spacing:-0.31em;
+    }
+
+    %grid--son {
+      letter-spacing:0em;
+      display:block;
+      vertical-align:top;
+    }
+
+    %grid--grandson {
+      letter-spacing:0em;
+      display:inline-block;
+      vertical-align:top;
+      margin-left:-0.31em;
+      &:first-of-type {
+        margin-left:0em;
+      }
+    }
+
+  .wrapper {
+    padding:1em;
+  }
+
+  .content, .sidebar {
+    width:100%;
+  }
+}
