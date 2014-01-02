@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	/* Bullgit styles */
+	mark {
+	color: #1393d5;
+	background: none;
+	}
+
+	a:link, a:visited {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+	}
+	a:hover, a:active {
+	color: #1393d5;
+	}
+	
+
+	body {
+		font:1em/1.65 'Old Standard TT', serif;
+		color:#333 ;
+	}
+	.output {
+		font-size: 1.5em;
+		width:90%;
+		margin: 0 auto;
+	}
+	
+	.output p {
+		margin:.5em 0;
+	}
+
+	.output p:nth-child(1) {
+		text-indent: 1.5em;
+		line-height: 1em;
+		margin-bottom: 1.6em;
+	}
+
+	.output p:nth-child(1n+3) {
+		font-size: 130%;
+		text-indent: 5em;
+	}
+
+	.output p:nth-child(3) {
+		margin-left: 2em;
+	}
+
+	.output p:nth-child(4n+2) {
+		text-align: right;
+		margin: 1.4em 10em;
+	}
+
+	.output p:nth-child(5n+5) {
+		font-size: 70%;
+		font-weight: bold;
+	}
+
+
+main {
+	width:100%;
+	max-width: 30em;
+	height: auto;
+	margin:2em auto;
+	padding:2em;
+	background: #f2f2f4;
+}
