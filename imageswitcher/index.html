@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>imageSwitcher - a tiny JavaScript to switch images</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://cdn.kevingimbel.me/css/bullgrid.beta.css">
+    <script type="text/javascript" src="imageswitcher.min.js"></script>        
+</head>
+<body>
+<div class="photoset">
+  <hgroup>
+  <h1>Just another Photoset</h1>
+  <p>A 640 byte JavaScript Function that turns a set of images into a interactive set of images.</p>
+  <p>Takes 3 Parameters: </p>
+  <ul>
+      <li>previewImage: An &lt;img&gt; Tag that holds the big image</li>
+      <li>allImages: the container of all images, like <code>.thumbnails > img</code></li>
+      <li>an event like mouseenter, mouseout or click</li>
+  </ul>
+    <pre>
+      <code>
+  imageSwitcher({
+    previewImage: "[data-js='previewImage']", // preview image 
+    allImages: ".thumbnails > img", // all the images for the array
+    event: "mouseenter" // the event to trigger the function
+  });   
+      </code>
+    </pre>
+    <p>Images via <a href="http://lorempixel.com">LoremPixel.com</a>, Demo with <a href="http://codepen.io/kevingimbel/pen/ugkfi">click Event on CodePen</a>.</p>
+  </hgroup>
+<div class="gw">
+  <div class="g four-fifths ">
+  <img data-js="previewImage" src="http://lorempixel.com/output/business-q-c-700-500-10.jpg" alt="Business meeting" title="Business Meeting" />
+  </div>
+  <aside class="g one-fifth thumbnails">
+  <img src="http://lorempixel.com/output/transport-q-c-700-500-7.jpg" alt="Traffic Jam" title="Just some traffic jam" />
+  <img src="http://lorempixel.com/output/fashion-q-c-700-500-6.jpg" alt="Women in a dress" title="A women wearing a green dress" />
+  <img src="http://lorempixel.com/output/cats-q-c-700-500-8.jpg" alt="Cat" title="Cat" />
+  <img src="http://lorempixel.com/output/food-q-c-700-500-2.jpg" alt="Food" title="some food" />
+  <img src="http://lorempixel.com/output/nightlife-q-c-700-500-10.jpg" alt="a party or something" title="A party" />
+  <img src="http://lorempixel.com/output/technics-q-c-700-500-4.jpg" alt="tech stuff" title="tech stuff" />
+  <img src="http://lorempixel.com/output/people-q-c-700-500-7.jpg" alt="a women from somewhere around arab" title="a women from somewhere around arab or something like that"/>
+  <img src="http://lorempixel.com/output/city-q-c-700-500-2.jpg" alt="city at night" title="a city at night" />
+  <img src="http://lorempixel.com/output/nightlife-q-c-700-500-8.jpg" alt="talking at a buffet or party" title="people talking at a party" />
+  <img src="http://lorempixel.com/output/nightlife-q-c-700-500-6.jpg" alt="signs at night" title="neon signs" />
+  <img src="http://lorempixel.com/output/transport-q-c-700-500-3.jpg"  alt="a car" title=" a car"/>
+  <img src="http://lorempixel.com/output/nightlife-q-c-700-500-2.jpg" alt="disco ball" title="a disco ball (is it even called like that in english?)" />
+  <img src="http://lorempixel.com/output/technics-q-c-700-500-7.jpg" alt="headphones and a smartphone" title="headphones and a smartphone" />
+  <img src="http://lorempixel.com/output/city-q-c-700-500-8.jpg" alt="a city at day" title="a city at day" />
+  <img src="http://lorempixel.com/output/sports-q-c-700-500-7.jpg" alt="someone diving" title="some diving" />
+  </aside>
+</div> <!-- gw -->
+<footer class="gw">
+    <div class="g one-half">
+        <p>May or may not I'll work on this and add features like Keyboard support or so.</p>
+    </div>
+
+    <div class="g one-half">
+        <a class="btn  g one-half" href="http://github.com/kevingimbel/demo/tree/master/imageswitcher">Download (6b minified)</a>
+        <a class="btn  g one-half" href="http://codepen.io/kevingimbel/pen/sBLoz">Demo</a>
+    </div>
+</footer>
+</div> <!-- photoset -->   
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {  
+      imageSwitcher({
+        previewImage: "[data-js='previewImage']",
+        allImages: ".thumbnails > img",
+        event: "mouseenter"
+      });
+    });
+</script>
+</body>
+</html>
