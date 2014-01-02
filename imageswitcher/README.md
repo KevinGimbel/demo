@@ -1,6 +1,6 @@
 ### Image Switcher
 
-A tiny JavaScript that let's you create photosets with a preview image that gets updated when you hover over a thumbnail or click it.
+A tiny bit of JavaScript that let's you create photosets with a preview image that gets updated when you hover over a thumbnail or click it.
 
 Usage:
 

@@ -1,4 +1,4 @@
-  function imageSwitcher(options) {
+function imageSwitcher(options) {
     var options = {
       previewImage: options.previewImage || "[data-js='firstImage']",
       allImages: options.allImages || "img",
