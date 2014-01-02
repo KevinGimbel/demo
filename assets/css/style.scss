@@ -61,7 +61,6 @@ a {
 .content {
   width: 65%;
   height: auto;
-  background: #ddd;
 
   @extend %grid--son;
 }
@@ -92,6 +91,8 @@ a {
 }
 
 .project {
+  margin-top: 3em;
+  background: #ddd;
   pre {
     background:#333;
     color:white;
@@ -100,6 +101,10 @@ a {
 
   p {
     padding:.5em 1.5em;
+  }
+
+  &:nth-child(1) {
+    margin-top:0;
   }
 }
 
