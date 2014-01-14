@@ -1,0 +1,42 @@
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    margin:0;
+    padding: 0;  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+  font: 1rem/1.65em "Open Sans", sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+p {
+    margin:1em 0;
+}
+.wrapper {
+    margin: 2.5em auto;
+    max-width: 60em;
+}
+
+pre {
+    background:#333;
+}
+
+pre code {
+    color:#ddd;
+}
+
+.intro {
+    background:#ddd;
+    padding:2.5em;
+}
+
+.repo {
+    width:100%;
+    max-width: 20em;
+    float:left;
+    padding:2.5em;
+}
