@@ -1,5 +1,5 @@
 ## github.js
-#### A little Ajax & Github API helper
+#### A tiny Ajax & Github API helper
 
 github.js provides a basic Ajax function that makes a call to the Github API - if it's user or organization and what you want to fetch is up to you.
 
