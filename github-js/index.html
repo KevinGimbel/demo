@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>github.js - a little Ajax Helper for Github</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="Github, API, JavaScript, Kevin Gimbel, Ajax">
+    <meta name="author" content="Kevin Gimbel">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <article class="intro">
+            <h1>github.js</h1>
+            <h4>A little Ajax & Github API helper</h4>
+            <p>github.js provides a basic Ajax function that makes a call to the Github API - if it's user or organization and what you want to fetch is up to you.</p>
+            <p><strong>NOTE: This is more of a showcase script than a "put in your project" thing.</strong><br>
+                You can learn from the code or help me improve it. :)</p>
+
+            <h3>Options:</h3>
+            <pre>
+                <code>  
+    # Everything behind "//" is the default
+    useLoader: true or false                // true,
+    loader: The loader                      // '[data-js="loader"]',
+    output: container div for results       // '[data-js="repo--output"]',
+    data_type: repos or members             // "repos",
+    profile_type: users or orgs             // "users",
+    name: Your name, this is the minimum
+    failedText: when something goes wrong   // 'Unable to fetch repos from Github.',
+    template: a HTML Template               // '&lt;article class="repo"&gt;'+
+                                               '&lt;hgroup&gt;'+
+                                                 '&lt;h3&gt;&lt;a href="{html_url}"&gt;{name}&lt;/a&gt;&lt;/h3&gt;'+
+                                               '&lt;/hgroup&gt;'+
+                                               '&lt;div class="repo--description"&gt;'+
+                                                 '&lt;p&gt;{description}&lt;/p&gt;'+
+                                               '&lt;/div&gt;'+
+                                               '&lt;/article&gt;'
+    }
+                </code>
+            </pre>
+        <p>You can output whatever you want by taking a look at the <a href="https://api.github.com/users/kevingimbel/repos">JSON Response</a>. If you want the count of watcher use <code>{watchers_count}</code> inside your template. Every value from the JSON Array can be outputted by using it's key with curly brackets in the template. </p>
+
+        <p>Below you can see an example using my Github Account and the following setup.</p>
+        <pre>
+            <code>
+    github({
+        output: "[data-js='output']",
+        profile_type: "users",
+        name: "kevingimbel",
+        data_type: "repos",
+        useLoader: false
+    });
+            </code>
+        </pre>
+        </article>
+    <div class="output" data-js="output"></div>
+
+    </div>
+</body>
+<script src="github.js"></script>
+<script>
+// calling the github function to fetch repos.
+github({
+    output: "[data-js='output']",
+    profile_type: "users",
+    name: "kevingimbel",
+    data_type: "repos",
+    useLoader: false
+});     
+</script>
+</html>
